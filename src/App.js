@@ -36,10 +36,10 @@ function App() {
       return;
     }
     if ((operations.includes(operant[operant.length - 1]) && operations.includes(button)) ||
-      (operations.includes(button) && operant == "")) {
+      (operations.includes(button) && operant === "")) {
       return;
     }
-    if (operant == '0' && !operations.includes(button)) {
+    if (operant === '0' && !operations.includes(button)) {
       return;
     }
     try {
@@ -65,7 +65,7 @@ function App() {
   }
 
   const ansHandler = () => {
-    if (operant === "Error" || operant == "0") {
+    if (operant === "Error" || operant === "0") {
       return;
     }
     setOperant(String(operant) + String(ans));
